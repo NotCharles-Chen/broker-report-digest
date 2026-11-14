@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+  報告頁模板（只讀）。新增報告：cp templates/report.html reports/<id>.html
+  1. 替換所有 {{佔位符}}；2. 依 CLAUDE.md 第 5 節填 6 個區塊；3. 刪除所有 TEMPLATE 註解。
+  數字標記：<data class="num" value="1800">1,800</data><cite class="pg">p.3</cite>
+  計算值：  <data class="calc" value="24.1">+24.1%</data>
+-->
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="report-id" content="{{ID}}">
+  <title>{{COMPANY}} {{TICKER}}｜{{BROKER_NAME}} {{DATE}}｜外資報告重點摘要站</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-back" href="../index.html">← 外資報告重點摘要站</a>
+  </header>
+
+  <main class="report">
+
+    <!-- TEMPLATE ① 基本資料：一句話結論 ≤ 40 字，須與 reports.json 的 one_line 相同 -->
+    <section id="basic" data-section="basic">
+      <p class="eyebrow">{{BROKER_NAME}}・{{DATE}}</p>
+      <h1>{{COMPANY}}<span class="ticker">{{TICKER}}</span></h1>
+      <p class="lede">{{ONE_LINE}}</p>
+      <dl class="meta">
+        <div><dt>券商</dt><dd>{{BROKER_NAME}}</dd></div>
+        <div><dt>報告日期</dt><dd>{{DATE}}</dd></div>
+        <div><dt>原文標題</dt><dd lang="en">{{TITLE_ORIGINAL}}</dd></div>
+        <div><dt>原文頁數</dt><dd>{{PAGES}} 頁</dd></div>
+      </dl>
+    </section>
+
+    <!-- TEMPLATE ② 評等與目標價：無前次資料時，該格寫「原文未提供」 -->
+    <section id="rating" data-section="rating">
+      <h2>評等與目標價</h2>
+      <div class="kpis">
+        <div class="kpi">
+          <span class="kpi-label">評等</span>
+          <span class="kpi-value" lang="en">{{RATING}}</span>
+          <span class="kpi-sub">前次：{{RATING_PREV}}</span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">目標價（{{CURRENCY}}）</span>
+          <span class="kpi-value"><data class="num" value="{{TARGET_PRICE_RAW}}">{{TARGET_PRICE}}</data><cite class="pg">p.{{P}}</cite></span>
+          <span class="kpi-sub">前次：<data class="num" value="{{TARGET_PREV_RAW}}">{{TARGET_PREV}}</data><cite class="pg">p.{{P}}</cite></span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">報告日股價（{{CURRENCY}}）</span>
+          <span class="kpi-value"><data class="num" value="{{PRICE_RAW}}">{{PRICE}}</data><cite class="pg">p.{{P}}</cite></span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">潛在漲幅</span>
+          <span class="kpi-value"><data class="calc" value="{{UPSIDE_RAW}}">{{UPSIDE}}</data></span>
+          <span class="kpi-sub">＝目標價 ÷ 報告日股價 − 1</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEMPLATE ③ 核心論點：剛好 3 點，每點 ≤ 60 字 -->
+    <section id="thesis" data-section="thesis">
+      <h2>核心論點</h2>
+      <ol class="points">
+        <li><strong>{{THESIS_1_TITLE}}</strong>{{THESIS_1_BODY}}</li>
+        <li><strong>{{THESIS_2_TITLE}}</strong>{{THESIS_2_BODY}}</li>
+        <li><strong>{{THESIS_3_TITLE}}</strong>{{THESIS_3_BODY}}</li>
+      </ol>
+    </section>
+
+    <!-- TEMPLATE ④ 主要風險：2～4 點，每點 ≤ 50 字 -->
+    <section id="risks" data-section="risks">
+      <h2>主要風險</h2>
+      <ul class="points risks">
+        <li>{{RISK_1}}</li>
+        <li>{{RISK_2}}</li>
+      </ul>
+    </section>
+
+    <!-- TEMPLATE ⑤ EPS 預估：欄 = 年度，可增減欄數；列固定三列 -->
+    <section id="estimates" data-section="estimates">
+      <h2>EPS 預估（{{CURRENCY}}）</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">項目</th><th scope="col">{{YEAR_1}}</th><th scope="col">{{YEAR_2}}</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">本次預估</th>
+              <td><data class="num" value="{{EPS_1_RAW}}">{{EPS_1}}</data><cite class="pg">p.{{P}}</cite></td>
+              <td><data class="num" value="{{EPS_2_RAW}}">{{EPS_2}}</data><cite class="pg">p.{{P}}</cite></td></tr>
+            <tr><th scope="row">前次預估</th>
+              <td><data class="num" value="{{EPS_PREV_1_RAW}}">{{EPS_PREV_1}}</data><cite class="pg">p.{{P}}</cite></td>
+              <td><data class="num" value="{{EPS_PREV_2_RAW}}">{{EPS_PREV_2}}</data><cite class="pg">p.{{P}}</cite></td></tr>
+            <tr><th scope="row">調整幅度</th>
+              <td><data class="calc" value="{{EPS_CHG_1_RAW}}">{{EPS_CHG_1}}</data></td>
+              <td><data class="calc" value="{{EPS_CHG_2_RAW}}">{{EPS_CHG_2}}</data></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TEMPLATE ⑥ 原文頁碼對照：本頁每個 cite.pg 用到的頁碼都要在這裡出現 -->
+    <section id="sources" data-section="sources">
+      <h2>原文頁碼對照</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">頁碼</th><th scope="col">該頁內容</th><th scope="col">本頁引用的數字</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>p.{{P}}</td><td>{{PAGE_CONTENT}}</td><td>{{NUMBERS_USED}}</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
