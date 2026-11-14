@@ -27,6 +27,30 @@
       "demo": false
     },
     {
+      "id": "20261111-ubs-2382",
+      "date": "2026-11-11",
+      "broker": "ubs",
+      "ticker": "2382",
+      "company": "廣達",
+      "title_original": "Q326 results: Elevated rack pricing weighs on margins",
+      "rating": "Buy",
+      "rating_prev": "Buy",
+      "rating_view": "positive",
+      "target_price": 400,
+      "target_prev": 450,
+      "currency": "TWD",
+      "price_at_report": 298,
+      "upside_pct": 34.2,
+      "one_line": "機櫃高單價稀釋毛利，小幅下修 EPS 與目標價，維持買進。",
+      "tags": [
+        "AI 伺服器",
+        "ODM"
+      ],
+      "pages": 15,
+      "path": "reports/20261111-ubs-2382.html",
+      "demo": false
+    },
+    {
       "id": "20261111-gs-3017",
       "date": "2026-11-11",
       "broker": "gs",
