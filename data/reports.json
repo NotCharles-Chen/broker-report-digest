@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "updated": "2026-11-14",
+  "reports": [
+    {
+      "id": "20261112-gs-2356",
+      "date": "2026-11-12",
+      "broker": "gs",
+      "ticker": "2356",
+      "company": "英業達",
+      "title_original": "Inventec (2356.TW): Increasing contribution from AI server putting pressure on margin; Neutral",
+      "rating": "Neutral",
+      "rating_prev": "Neutral",
+      "rating_view": "neutral",
+      "target_price": 56,
+      "target_prev": 61,
+      "currency": "TWD",
+      "price_at_report": 51.2,
+      "upside_pct": 9.4,
+      "one_line": "伺服器比重提高壓縮毛利，下修 EPS 與目標價，維持中立。",
+      "tags": [
+        "AI 伺服器",
+        "ODM"
+      ],
+      "pages": 9,
+      "path": "reports/20261112-gs-2356.html",
+      "demo": false
+    },
+    {
+      "id": "20261111-gs-3017",
+      "date": "2026-11-11",
+      "broker": "gs",
+      "ticker": "3017",
+      "company": "奇鋐",
+      "title_original": "AVC (3017.TW): Increasing liquid cooling penetration to drive growth ahead, capacity to expand 50% in 2027; Buy",
+      "rating": "Buy",
+      "rating_prev": "Buy",
+      "rating_view": "positive",
+      "target_price": 4820,
+      "target_prev": 4736,
+      "currency": "TWD",
+      "price_at_report": 2790,
+      "upside_pct": 72.8,
+      "one_line": "3Q26 獲利優於預期，液冷滲透與擴產支撐成長，上調目標價。",
+      "tags": [
+        "散熱",
+        "液冷"
+      ],
+      "pages": 8,
+      "path": "reports/20261111-gs-3017.html",
+      "demo": false
+    },
+    {
+      "id": "20261111-ms-2383",
+      "date": "2026-11-11",
+      "broker": "ms",
+      "ticker": "2383",
+      "company": "台光電",
+      "title_original": "Addressing investor questions about EMC's share gain for switch board CCL",
+      "rating": "Overweight",
+      "rating_prev": "Overweight",
+      "rating_view": "positive",
+      "target_price": 8800,
+      "target_prev": null,
+      "currency": "TWD",
+      "price_at_report": 4365,
+      "upside_pct": 101.6,
+      "one_line": "輝達供應鏈洽詢交換器板 CCL 供貨，有望擴大市佔，維持加碼。",
+      "tags": [
+        "CCL",
+        "AI 伺服器"
+      ],
+      "pages": 9,
+      "path": "reports/20261111-ms-2383.html",
+      "demo": false
+    },
+    {
+      "id": "20261111-daiwa-3231",
+      "date": "2026-11-11",
+      "broker": "daiwa",
+      "ticker": "3231",
+      "company": "緯創",
+      "title_original": "Wistron (3231 TT): 3Q26 results review: solid profitability from parent",
+      "rating": "Buy",
+      "rating_prev": "Buy",
+      "rating_view": "positive",
+      "target_price": 300,
+      "target_prev": 288,
+      "currency": "TWD",
+      "price_at_report": 174.5,
+      "upside_pct": 71.9,
+      "one_line": "3Q26 母公司獲利優於預期，2027 AI 伺服器訂單與定價有利。",
+      "tags": [
+        "AI 伺服器",
+        "ODM"
+      ],
+      "pages": 7,
+      "path": "reports/20261111-daiwa-3231.html",
+      "demo": false
+    },
+    {
+      "id": "20261111-daiwa-2382",
+      "date": "2026-11-11",
+      "broker": "daiwa",
+      "ticker": "2382",
+      "company": "廣達",
+      "title_original": "Quanta Computer (2382 TT): 3Q26 review: AI server outlook remains largely on track",
+      "rating": "Buy",
+      "rating_prev": "Buy",
+      "rating_view": "positive",
+      "target_price": 400,
+      "target_prev": 480,
+      "currency": "TWD",
+      "price_at_report": 298,
+      "upside_pct": 34.2,
+      "one_line": "3Q26 大致符合預期，AI 伺服器展望不變，因市場情緒下修目標價。",
+      "tags": [
+        "AI 伺服器",
+        "ODM"
+      ],
+      "pages": 7,
+      "path": "reports/20261111-daiwa-2382.html",
+      "demo": false
+    },
+    {
+      "id": "20261111-citi-3324",
+      "date": "2026-11-11",
+      "broker": "citi",
+      "ticker": "3324",
+      "company": "雙鴻",
+      "title_original": "Auras Technology (3324.TWO): 3Q26 Missed on Margins; ASIC Ramp to Drive 4Q26E Recovery",
+      "rating": "Buy",
+      "rating_prev": "Buy",
+      "rating_view": "positive",
+      "target_price": 2000,
+      "target_prev": null,
+      "currency": "TWD",
+      "price_at_report": 1300,
+      "upside_pct": 53.8,
+      "one_line": "3Q26 毛利率不如預期，ASIC 液冷量產可望帶動 4Q26 回升。",
+      "tags": [
+        "散熱",
+        "液冷"
+      ],
+      "pages": 11,
+      "path": "reports/20261111-citi-3324.html",
+      "demo": false
+    }
+  ]
+}

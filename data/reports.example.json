@@ -1,0 +1,28 @@
+{
+  "_說明": "欄位填寫範例，全部為虛構資料（demo: true），只讀，不會出現在網站上。",
+  "schema_version": 1,
+  "updated": "2026-11-13",
+  "reports": [
+    {
+      "id": "20261110-ms-0000",
+      "date": "2026-11-10",
+      "broker": "ms",
+      "ticker": "0000",
+      "company": "示範科技",
+      "title_original": "Demo Tech: Raising Estimates on Stronger Demand",
+      "rating": "Overweight",
+      "rating_prev": "Overweight",
+      "rating_view": "positive",
+      "target_price": 1800,
+      "target_prev": 1650,
+      "currency": "TWD",
+      "price_at_report": 1450,
+      "upside_pct": 24.1,
+      "one_line": "需求優於預期，上修 EPS 與目標價，維持加碼。",
+      "tags": ["示範", "半導體"],
+      "pages": 18,
+      "path": "reports/20261110-ms-0000.html",
+      "demo": true
+    }
+  ]
+}

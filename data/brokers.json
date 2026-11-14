@@ -1,0 +1,21 @@
+{
+  "_說明": "券商代碼表。代碼 = 報告 id 中間段，全小寫英文。新增券商時在此加一筆，並記入 log.md。",
+  "brokers": {
+    "ms":     { "name": "Morgan Stanley",    "zh": "摩根士丹利（大摩）" },
+    "gs":     { "name": "Goldman Sachs",     "zh": "高盛" },
+    "jpm":    { "name": "J.P. Morgan",       "zh": "摩根大通（小摩）" },
+    "citi":   { "name": "Citi",              "zh": "花旗" },
+    "ubs":    { "name": "UBS",               "zh": "瑞銀" },
+    "bofa":   { "name": "BofA Securities",   "zh": "美銀證券" },
+    "macq":   { "name": "Macquarie",         "zh": "麥格理" },
+    "hsbc":   { "name": "HSBC",              "zh": "滙豐" },
+    "nomura": { "name": "Nomura",            "zh": "野村" },
+    "clsa":   { "name": "CLSA",              "zh": "里昂" },
+    "daiwa":  { "name": "Daiwa",             "zh": "大和" },
+    "mizuho": { "name": "Mizuho",            "zh": "瑞穗" },
+    "jef":    { "name": "Jefferies",         "zh": "傑富瑞" },
+    "barc":   { "name": "Barclays",          "zh": "巴克萊" },
+    "db":     { "name": "Deutsche Bank",     "zh": "德意志銀行" },
+    "bern":   { "name": "Bernstein",         "zh": "伯恩斯坦" }
+  }
+}
