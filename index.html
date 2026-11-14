@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>外資報告重點摘要站</title>
+  <meta name="description" content="英文外資券商報告的中文重點摘要，每個數字都附原文頁碼。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>外資報告重點摘要站</h1>
+    <p class="hero-lede">英文外資券商報告的中文重點：評等、目標價、EPS 預估、核心論點與風險，每個數字都附原文頁碼。</p>
+    <p class="hero-meta" id="meta">讀取中…</p>
+  </header>
+
+  <main class="home">
+    <div class="controls">
+      <label for="filter-company">公司</label>
+      <select id="filter-company"><option value="">全部</option></select>
+      <label for="filter-broker">券商</label>
+      <select id="filter-broker"><option value="">全部</option></select>
+    </div>
+
+    <section aria-labelledby="h-cards">
+      <h2 id="h-cards">最新報告</h2>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section aria-labelledby="h-compare">
+      <h2 id="h-compare">比較表</h2>
+      <p class="section-note">點欄位標題可排序。潛在漲幅 ＝ 目標價 ÷ 報告日股價 − 1。</p>
+      <div class="table-wrap">
+        <table class="compare" id="compare">
+          <thead>
+            <tr>
+              <th scope="col"><button type="button" data-key="date">日期</button></th>
+              <th scope="col"><button type="button" data-key="company">公司</button></th>
+              <th scope="col"><button type="button" data-key="broker">券商</button></th>
+              <th scope="col"><button type="button" data-key="rating_view">評等</button></th>
+              <th scope="col" class="r"><button type="button" data-key="target_price">目標價</button></th>
+              <th scope="col" class="r"><button type="button" data-key="target_prev">前次目標價</button></th>
+              <th scope="col" class="r"><button type="button" data-key="price_at_report">報告日股價</button></th>
+              <th scope="col" class="r"><button type="button" data-key="upside_pct">潛在漲幅</button></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <noscript><p>本頁需要 JavaScript 才能顯示報告列表。</p></noscript>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
